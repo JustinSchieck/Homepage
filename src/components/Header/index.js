@@ -2,36 +2,29 @@ import React from "react";
 import styled from "styled-components";
 
 const RootDiv = styled.div`
-  height: 300px;
+  height: 60px;
   width: 100%;
-  background-color: grey;
+  background-color: lightblue;
   display: flex;
-  justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
-  font-family: "Lobster Two", cursive;
-  font-size: 30px;
+  font-size: 18px;
+  font-family: font-family: 'PT Serif', serif;
+
 `;
 
 const NavDiv = styled.div`
   margin: 0 20px;
   flex-grow: 1;
-  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-`;
-
-const Image = styled.img`
-  max-height: 200px;
-  max-width: 200px;
-  border-radius: 50%;
-  border: solid black 3px;
+  justify-content: center;
 `;
 
 const Link = styled.a`
   color: black;
-  font-family: "Lobster Two", cursive;
-  font-size: 30px;
+  font-family: "PT Serif", serif;
+  font-size: 18px;
   text-decoration: none;
+  margin: auto;
 `;
 
 const Header = () => {
@@ -42,9 +35,6 @@ const Header = () => {
         <Link href="#">Expierence</Link>
         <Link href="#">Projects</Link>
         <Link href="#">Skills</Link>
-      </NavDiv>
-      <Image src="../me.png" alt="portfolio" />
-      <NavDiv>
         <Link href="#">Education</Link>
         <Link href="#">Awards</Link>
         <Link href="#">Contact</Link>

@@ -1,0 +1,16 @@
+.transform:hover svg {
+  transform: rotate(90deg);
+}
+.transform svg {
+  transition: transform 0.2s ease-in;
+}
+
+/* .octa {
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 250px;
+} */
