@@ -8,6 +8,14 @@ const RootDiv = styled.div`
   align-items: center; /* center items vertically, in this case */
   width: 100%;
   background-color: #b4caed;
+  padding: 100px 0px;
+`;
+const LeftSection = styled.div`
+  width: 40%;
+`;
+
+const RightSection = styled.div`
+  width: 40%;
 `;
 
 const PersonalImg = styled.img`
@@ -16,19 +24,29 @@ const PersonalImg = styled.img`
   border-radius: 50%;
 `;
 
-const AboutTextDiv = styled.div`
-  width: 500px;
-`;
-
 const About = () => {
   return (
     <RootDiv className="root about">
-      <div style={{ margin: "50px 0px;" }}>
+      <LeftSection>
         <PersonalImg src="me.png" alt="justin" />
-      </div>
-      <AboutTextDiv>
-        <span>About me</span>
-      </AboutTextDiv>
+        <div>About me</div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a
+            tristique ante. Phasellus dignissim varius metus auctor consequat.
+            Maecenas hendrerit lorem nec enim placerat vulputate. Ut consectetur
+            odio tempus orci accumsan malesuada. Sed blandit est vitae neque
+            rhoncus, non tempus enim suscipit. Donec ultrices turpis eget velit
+            bibendum, vitae pharetra sem vestibulum. Aliquam feugiat mauris ac
+            nisi volutpat, quis facilisis lectus imperdiet. In a felis enim. Sed
+            euismod blandit purus, vitae volutpat mi feugiat in. Integer
+            bibendum massa eu ipsum tincidunt ullamcorper.
+          </p>
+        </div>
+      </LeftSection>
+      <RightSection>
+        <p>test</p>
+      </RightSection>
     </RootDiv>
   );
 };
