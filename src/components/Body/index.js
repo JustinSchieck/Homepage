@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  ArrowForward,
-  ArrowDownward,
-  FullscreenExit
-} from "@material-ui/icons";
+import { ArrowForward } from "@material-ui/icons";
 import About from "../About";
+import Values from "../Values.js/index.js";
 
 const SectionDiv = styled.div`
   display: block;
@@ -92,11 +89,9 @@ const Body = () => {
           </Link>
         </TextDiv>
       </WelcomeDiv>
-      <SectionDiv id="about" style={{ backgroundColor: "#b4caed" }}>
+      <SectionDiv id="about">
         <About />
-      </SectionDiv>
-      <SectionDiv>
-        <span>Expirence</span>
+        <Values />
       </SectionDiv>
       <SectionDiv style={{ backgroundColor: "lightgray" }}>
         <span>Projects</span>

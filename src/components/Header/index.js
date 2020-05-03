@@ -31,14 +31,14 @@ const Header = () => {
   return (
     <RootDiv>
       <NavDiv>
-        <Link href="#">About</Link>
-        <Link href="#">Expierence</Link>
-        <Link href="#">Projects</Link>
-        <Link href="#">Skills</Link>
-        <Link href="#">Education</Link>
-        <Link href="#">Awards</Link>
-        <Link href="#">Contact</Link>
-        <Link href="#">Resume</Link>
+        <Link href="#about">About</Link>
+        <Link href="#experience">Experience</Link>
+        <Link href="#projects">Projects</Link>
+        <Link href="#skills">Skills</Link>
+        <Link href="#education">Education</Link>
+        <Link href="#awards">Awards</Link>
+        <Link href="#contact">Contact</Link>
+        <Link href="#resume">Resume</Link>
       </NavDiv>
     </RootDiv>
   );
