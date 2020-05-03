@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Skills from "../Skills";
+import { colors } from "../../constants";
 
 const RootDiv = styled.div`
   display: flex;
@@ -7,7 +9,8 @@ const RootDiv = styled.div`
   justify-content: center; /* center items horizontally, in this case */
   align-items: center; /* center items vertically, in this case */
   width: 100%;
-  background-color: #b4caed;
+  background-color: ${colors.background};
+  color: white;
   padding: 100px 0px;
 `;
 const LeftSection = styled.div`
@@ -45,7 +48,7 @@ const About = () => {
         </div>
       </LeftSection>
       <RightSection>
-        <p>test</p>
+        <Skills />
       </RightSection>
     </RootDiv>
   );
