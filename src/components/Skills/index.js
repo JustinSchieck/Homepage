@@ -1,75 +1,51 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
-
-const RootDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* center items horizontally, in this case */
-  align-items: center; /* center items vertically, in this case */
-  font-size: 18px;
-  font-family: font-family: 'PT Serif', serif;
-`;
 
 const TitleText = styled.p`
   width: 100%;
 `;
+const RootDiv = styled.div`
+  display: flex;
+  flex-direction: column; /* make main axis horizontal (default setting) */
+  justify-content: flex-start;
+  align-items: center; /* center items vertically, in this case */
+  width: 100%;
+  padding: 0px 20px;
+`;
 
-const Header = () => {
-  return (
-    <RootDiv>
-      <TitleText>Skills</TitleText>
-      <ul>
-        <li>
-          <div>
-            <h3>Html</h3>
-          </div>
-          <div>
-            <span></span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Javascript/JQuery</h3>
-          </div>
-          <div>
-            <span></span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>React</h3>
-          </div>
-          <div>
-            <span></span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Node</h3>
-          </div>
-          <div>
-            <span></span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Express</h3>
-          </div>
-          <div>
-            <span></span>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h3>Mongo</h3>
-          </div>
-          <div>
-            <span></span>
-          </div>
-        </li>
-      </ul>
-    </RootDiv>
-  );
+const SkillContainer = styled.div`
+  width: 100%;
+`;
+
+const SkillTitle = styled.div`
+  width: 15%;
+`;
+
+const SkillVisual = styled.div`
+  width: auto;
+`;
+
+const Skills = ({ skills }) => {
+  const skillDisplay = skills.map((item, index) => {
+    return (
+      <SkillContainer key={index} id="skill container">
+        <SkillTitle id="skillbar title">{item.name}</SkillTitle>
+        <SkillVisual id="skillbar display">{skills.total}</SkillVisual>
+      </SkillContainer>
+    );
+  });
+
+  return <RootDiv className="root values">{skillDisplay}</RootDiv>;
 };
 
-export default Header;
+Skills.propTypes = {
+  member: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      total: PropTypes.number.isRequired,
+    })
+  ),
+};
+
+export default Skills;

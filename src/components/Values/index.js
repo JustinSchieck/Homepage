@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const RootDiv = styled.div`
@@ -11,7 +12,7 @@ const RootDiv = styled.div`
   padding: 100px 0px;
 `;
 
-const Values = () => {
+const Values = ({ skills }) => {
   return <RootDiv className="root values"></RootDiv>;
 };
 

@@ -27,6 +27,25 @@ const PersonalImg = styled.img`
   border-radius: 50%;
 `;
 
+const skillList = [
+  {
+    name: "HTML",
+    total: 100,
+  },
+  {
+    name: "CSS",
+    total: 85,
+  },
+  {
+    name: "Javascript",
+    total: 95,
+  },
+  {
+    name: "ES6",
+    total: 80,
+  },
+];
+
 const About = () => {
   return (
     <RootDiv className="root about">
@@ -48,7 +67,7 @@ const About = () => {
         </div>
       </LeftSection>
       <RightSection>
-        <Skills />
+        <Skills skills={skillList} />
       </RightSection>
     </RootDiv>
   );
