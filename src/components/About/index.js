@@ -15,16 +15,23 @@ const RootDiv = styled.div`
 `;
 const LeftSection = styled.div`
   width: 40%;
+  margin: 0 20px 0 10px;
 `;
 
 const RightSection = styled.div`
   width: 40%;
+  margin: 0 10px 0 20px;
 `;
 
 const PersonalImg = styled.img`
   max-height: 300px;
   border: black solid 2px;
   border-radius: 50%;
+`;
+
+const SkillsTitle = styled.div`
+  font-size: 24px;
+  margin: 30px auto;
 `;
 
 const skillList = [
@@ -38,11 +45,23 @@ const skillList = [
   },
   {
     name: "Javascript",
-    total: 95,
+    total: 85,
   },
   {
     name: "ES6",
     total: 80,
+  },
+  {
+    name: "C#",
+    total: 50,
+  },
+  {
+    name: "AODA",
+    total: 100,
+  },
+  {
+    name: "REST APIs",
+    total: 60,
   },
 ];
 
@@ -67,6 +86,7 @@ const About = () => {
         </div>
       </LeftSection>
       <RightSection>
+        <SkillsTitle>Skills</SkillsTitle>
         <Skills skills={skillList} />
       </RightSection>
     </RootDiv>

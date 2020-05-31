@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ArrowForward } from "@material-ui/icons";
 import About from "../About";
+import Projects from "../Projects";
 
 const SectionDiv = styled.div`
   display: block;
@@ -48,7 +49,7 @@ const Name = styled.span`
 
 const ButtonText = styled.div`
   text-align: center;
-  margin-right: 10px;
+  margin: 10px 10px 0 0;
 `;
 
 const AboutButton = styled.button`
@@ -58,7 +59,6 @@ const AboutButton = styled.button`
   height: 50px;
   width: 210px;
   margin-top: 30px;
-  text-decoration: none;
   cursor: pointer;
   border: 3px white solid;
   background: transparent;
@@ -83,7 +83,10 @@ const Body = () => {
           <Link href="#about">
             <AboutButton className="transform">
               <ButtonText>Learn More!</ButtonText>
-              <ArrowForward className="arrowIcon" />
+              <ArrowForward
+                className="arrowIcon"
+                style={{ marginTop: "8px", fontSize: "1.7rem" }}
+              />
             </AboutButton>
           </Link>
         </TextDiv>
@@ -92,7 +95,7 @@ const Body = () => {
         <About />
       </SectionDiv>
       <SectionDiv style={{ backgroundColor: "lightgray" }}>
-        <span>Projects</span>
+        <Projects />
       </SectionDiv>
       <SectionDiv>
         <span>Skills</span>

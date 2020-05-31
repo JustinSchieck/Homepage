@@ -9,21 +9,23 @@ const RootDiv = styled.div`
   display: flex;
   flex-direction: column; /* make main axis horizontal (default setting) */
   justify-content: flex-start;
-  align-items: center; /* center items vertically, in this case */
+  text-align: left;
   width: 100%;
   padding: 0px 20px;
 `;
 
 const SkillContainer = styled.div`
+  display: flex;
   width: 100%;
+  margin: 10px;
 `;
 
 const SkillTitle = styled.div`
-  width: 15%;
+  width: 100px;
 `;
 
 const SkillVisual = styled.div`
-  width: auto;
+  margin-right: auto;
 `;
 
 const Skills = ({ skills }) => {
@@ -31,7 +33,16 @@ const Skills = ({ skills }) => {
     return (
       <SkillContainer key={index} id="skill container">
         <SkillTitle id="skillbar title">{item.name}</SkillTitle>
-        <SkillVisual id="skillbar display">{skills.total}</SkillVisual>
+        <SkillVisual
+          id="skillbar display"
+          style={{
+            width: `${item.total}%`,
+            backgroundColor: `hsl( 200, 80%, ${100 / (index + 3.5)}%)`,
+          }}
+        >
+          {skills.total}
+        </SkillVisual>
+        <div style={{ width: `${100 - item.total}%` }} />
       </SkillContainer>
     );
   });
@@ -40,7 +51,7 @@ const Skills = ({ skills }) => {
 };
 
 Skills.propTypes = {
-  member: PropTypes.arrayOf(
+  skills: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       total: PropTypes.number.isRequired,
