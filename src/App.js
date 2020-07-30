@@ -1,16 +1,23 @@
 import React from "react";
+import styled from 'styled-components';
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Body from "./components/Body";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import AnimatedNav from './components/AnimatedNav';
+
 
 function App() {
   return (
-    <div className="App" style={{ width: "auto" }}>
-      <Header />
-      <Body />
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="*">
+          <AnimatedNav />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
