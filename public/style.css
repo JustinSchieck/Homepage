@@ -1,10 +1,13 @@
 .transform:hover svg {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .transform svg {
-  transition: transform 0.2s ease-in;
+	transition: transform 0.2s ease-in;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 /* .octa {
   height: 250px;
   overflow: hidden;

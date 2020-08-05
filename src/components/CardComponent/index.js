@@ -13,12 +13,13 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
 	rootDiv: {
-		maxWidth: 300,
+		maxWidth: 500,
 		minWidth: 150,
 		height: 300,
 	},
 	media: {
-		height: 200,
+		height: "60%",
+		padding: 0,
 	},
 	button: {
 		height: 300,
@@ -28,7 +29,12 @@ const useStyles = makeStyles({
 		fontSize: "16px",
 	},
 	CardContentDiv: {
-		padding: "8px",
+		height: "inherit",
+	},
+	GridStyle: {
+		marginBottom: "20px",
+		paddingLeft: "10px",
+		paddingRight: "10px",
 	},
 });
 
@@ -42,7 +48,7 @@ const CardComponent = (props) => {
 	const classes = useStyles();
 
 	return (
-		<Grid item xs={12} sm={6} md={4}>
+		<Grid item xs={12} sm={6} md={3} className={classes.GridStyle}>
 			<Card className={classes.rootDiv}>
 				<CardActionArea className={classes.button}>
 					<CardMedia className={classes.media} image={image} title={title} />
