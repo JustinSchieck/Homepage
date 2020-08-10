@@ -1,21 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import { Grid } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
 	rootDiv: {
-		maxWidth: 500,
+		maxWidth: 350,
 		minWidth: 150,
 		height: 300,
+		margin: "15px",
 	},
 	media: {
 		height: "60%",
@@ -36,6 +33,9 @@ const useStyles = makeStyles({
 		paddingLeft: "10px",
 		paddingRight: "10px",
 	},
+	Description: {
+		textAlign: "left",
+	},
 });
 
 // Wants:
@@ -43,31 +43,33 @@ const useStyles = makeStyles({
 // Feature note: card expand into large modal showing more details about the project
 // including urls to said projects
 
-const CardComponent = (props) => {
-	const { image, title, description, date, tags } = props;
+const CardComponent = ({ image, title, description, date, tags }) => {
 	const classes = useStyles();
 
 	return (
-		<Grid item xs={12} sm={6} md={3} className={classes.GridStyle}>
-			<Card className={classes.rootDiv}>
-				<CardActionArea className={classes.button}>
-					<CardMedia className={classes.media} image={image} title={title} />
-					<CardContent className={classes.CardContentDiv}>
-						<Typography
-							gutterBottom
-							variant="h5"
-							component="h2"
-							className={classes.title}
-						>
-							{title}
-						</Typography>
-						<Typography variant="body2" color="textSecondary" component="p">
-							{description}
-						</Typography>
-					</CardContent>
-				</CardActionArea>
-			</Card>
-		</Grid>
+		<Card className={classes.rootDiv}>
+			<CardActionArea className={classes.button}>
+				<CardMedia className={classes.media} image={image} title={title} />
+				<CardContent className={classes.CardContentDiv}>
+					<Typography
+						gutterBottom
+						variant="h5"
+						component="h2"
+						className={classes.title}
+					>
+						{title}
+					</Typography>
+					<Typography
+						variant="body2"
+						color="textSecondary"
+						component="p"
+						className={classes.Description}
+					>
+						{description}
+					</Typography>
+				</CardContent>
+			</CardActionArea>
+		</Card>
 	);
 };
 

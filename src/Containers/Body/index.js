@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { ArrowForward } from "@material-ui/icons";
 import About from "../About";
 import Projects from "../Projects";
+import Experience from "../Experience";
+import Contact from "../Contact";
 
 const SectionDiv = styled.div`
 	display: block;
@@ -95,19 +97,13 @@ const Body = () => {
 				<About />
 			</SectionDiv>
 			<SectionDiv id="experience" style={{ backgroundColor: "lightgray" }}>
-				<span>Experience</span>
+				<Experience />
 			</SectionDiv>
 			<SectionDiv id="projects">
 				<Projects />
 			</SectionDiv>
-			<SectionDiv id="awards" style={{ backgroundColor: "lightgray" }}>
-				<span>Awards</span>
-			</SectionDiv>
 			<SectionDiv id="contact">
-				<span>Contact</span>
-			</SectionDiv>
-			<SectionDiv id="resume">
-				<span>Resume Download</span>
+				<Contact />
 			</SectionDiv>
 		</div>
 	);

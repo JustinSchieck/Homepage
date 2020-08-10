@@ -1,17 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import CardComponent from "../CardComponent";
 import { Grid } from "@material-ui/core";
 
 const RootDiv = styled.div`
-	min-height: 500px;
-	padding: 30px 150px;
+	min-height: 450px;
+	width: 100%;
+	margin: 0 0 20px 0;
 `;
 
 const TitleDiv = styled.h1`
 	font-size: 32px;
 	padding: 10px 0 20px 0;
+	width: 100%;
 `;
 
 const roboticArmDescription =
@@ -26,8 +27,9 @@ const Projects = () => {
 			<Grid
 				container
 				direction="row"
-				justify="space-evenly"
+				justify="center"
 				alignItems="center"
+				xs={12}
 			>
 				<CardComponent
 					image="roboticArmv2.jpg"
@@ -38,11 +40,7 @@ const Projects = () => {
 					title="Augmented Reality Sandbox"
 					description={SandboxDescription}
 				/>
-				<CardComponent
-					image="roboticArmv2.jpg"
-					title="Arduino Controlled Robotioc Arm"
-					description={roboticArmDescription}
-				/>
+
 				<CardComponent
 					image="roboticArmv2.jpg"
 					title="Arduino Controlled Robotioc Arm"
