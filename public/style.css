@@ -1,34 +1,13 @@
 .transform:hover svg {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .transform svg {
-  transition: transform 0.2s ease-in;
+	transition: transform 0.2s ease-in;
 }
 .container {
   position: relative;
 }
 
-.page {
-  position: absolute;
-  left: 15px;
-  right: 15px;
-}
-
-.page-enter {
-  transform: translateX(-100vw);
-    position: absolute;
-}
-
-.page-enter-active {
-  transform: translateX(0);
-    transition: all 300ms linear 300ms;
-}
-
-.page-exit {
-  transform: translateX(0);
-}
-
-.page-exit-active {
-  transform: translateX(100vw);
-    transition: all 300ms linear
+html {
+	scroll-behavior: smooth;
 }
