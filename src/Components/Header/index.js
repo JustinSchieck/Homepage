@@ -4,7 +4,7 @@ import styled from "styled-components";
 const RootDiv = styled.div`
   height: 60px;
   width: 100%;
-  background-color: lightblue;
+  background-color: darkgray;
   display: flex;
   align-items: center; /* align vertical */
   font-size: 18px;
@@ -16,7 +16,15 @@ const NavDiv = styled.div`
 	margin: 0 20px;
 	flex-grow: 1;
 	display: flex;
-	justify-content: center;
+`;
+const LogoDiv = styled.div`
+	width: 30%;
+`;
+const LinkDiv = styled.div`
+	margin: 0 30px;
+	display: flex;
+	width: 70%;
+	justify-content: space-evenly;
 `;
 
 const Link = styled.a`
@@ -31,13 +39,15 @@ const Header = () => {
 	return (
 		<RootDiv>
 			<NavDiv>
-				<Link href="#about">About</Link>
-				<Link href="#projects">Projects</Link>
-				<Link href="#education">Education</Link>
-				<Link href="#experience">Experience</Link>
-				<Link href="#awards">Awards</Link>
-				<Link href="#contact">Contact</Link>
-				<Link href="#resume">Resume</Link>
+				<LogoDiv>
+					<img src="Logo.png" alt="logo" />
+				</LogoDiv>
+				<LinkDiv>
+					<Link href="#about">About</Link>
+					<Link href="#projects">Projects</Link>
+					<Link href="#education">History</Link>
+					<Link href="#contact">Contact</Link>
+				</LinkDiv>
 			</NavDiv>
 		</RootDiv>
 	);
