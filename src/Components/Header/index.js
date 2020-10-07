@@ -20,11 +20,17 @@ const NavDiv = styled.div`
 const LogoDiv = styled.div`
 	width: 30%;
 `;
-const LinkDiv = styled.div`
+
+const LinkParent = styled.div`
 	margin: 0 30px;
 	display: flex;
 	width: 70%;
-	justify-content: space-evenly;
+	justify-content: flex-end;
+`;
+
+const LinkDiv = styled.div`
+	display: flex;
+	width: 40%;
 `;
 
 const Link = styled.a`
@@ -42,12 +48,14 @@ const Header = () => {
 				<LogoDiv>
 					<img src="Logo.png" alt="logo" />
 				</LogoDiv>
-				<LinkDiv>
-					<Link href="#about">About</Link>
-					<Link href="#projects">Projects</Link>
-					<Link href="#education">History</Link>
-					<Link href="#contact">Contact</Link>
-				</LinkDiv>
+				<LinkParent>
+					<LinkDiv>
+						<Link href="#about">About</Link>
+						<Link href="#projects">Projects</Link>
+						<Link href="#education">History</Link>
+						<Link href="#contact">Contact</Link>
+					</LinkDiv>
+				</LinkParent>
 			</NavDiv>
 		</RootDiv>
 	);
