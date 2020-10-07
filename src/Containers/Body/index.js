@@ -96,9 +96,6 @@ const Body = () => {
 			<SectionDiv id="about">
 				<About />
 			</SectionDiv>
-			<SectionDiv id="experience" style={{ backgroundColor: "lightgray" }}>
-				<Experience />
-			</SectionDiv>
 			<SectionDiv id="projects">
 				<Projects />
 			</SectionDiv>
