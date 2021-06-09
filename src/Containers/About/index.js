@@ -9,7 +9,6 @@ const RootDiv = styled.div`
   justify-content: center; /* center items horizontally, in this case */
   align-items: center; /* center items vertically, in this case */
   width: 100%;
-  background-color: ${colors.background};
   color: white;
   padding: 100px 0px;
 `;
@@ -24,70 +23,116 @@ const RightSection = styled.div`
 `;
 
 const PersonalImg = styled.img`
-  max-height: 300px;
+  max-height: 450px;
   border: black solid 2px;
-  border-radius: 50%;
+  border-radius: 25%;
 `;
 
-const SkillsTitle = styled.div`
-  font-size: 24px;
-  margin: 30px auto;
+const WelcomeTitle = styled.span`
+  background: red;
+  background: -webkit-linear-gradient(
+    left,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -o-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -moz-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: linear-gradient(
+    to right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
-const skillList = [
-  {
-    name: "HTML",
-    total: 100,
-  },
-  {
-    name: "CSS",
-    total: 85,
-  },
-  {
-    name: "Javascript",
-    total: 85,
-  },
-  {
-    name: "ES6",
-    total: 80,
-  },
-  {
-    name: "C#",
-    total: 50,
-  },
-  {
-    name: "AODA",
-    total: 100,
-  },
-  {
-    name: "REST APIs",
-    total: 60,
-  },
-];
+const AboutTitle = styled.h1``;
+
+// const skillList = [
+//   {
+//     name: "HTML",
+//     total: 100,
+//   },
+//   {
+//     name: "CSS",
+//     total: 85,
+//   },
+//   {
+//     name: "Javascript",
+//     total: 85,
+//   },
+//   {
+//     name: "ES6",
+//     total: 80,
+//   },
+//   {
+//     name: "C#",
+//     total: 50,
+//   },
+//   {
+//     name: "AODA",
+//     total: 100,
+//   },
+//   {
+//     name: "REST APIs",
+//     total: 60,
+//   },
+// ];
+// <SkillsTitle>Skills</SkillsTitle>
+// <Skills skills={skillList} />
 
 const About = () => {
   return (
     <RootDiv className="root about">
       <LeftSection>
-        <PersonalImg src="me.png" alt="justin" />
-        <div>About me</div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a
-            tristique ante. Phasellus dignissim varius metus auctor consequat.
-            Maecenas hendrerit lorem nec enim placerat vulputate. Ut consectetur
-            odio tempus orci accumsan malesuada. Sed blandit est vitae neque
-            rhoncus, non tempus enim suscipit. Donec ultrices turpis eget velit
-            bibendum, vitae pharetra sem vestibulum. Aliquam feugiat mauris ac
-            nisi volutpat, quis facilisis lectus imperdiet. In a felis enim. Sed
-            euismod blandit purus, vitae volutpat mi feugiat in. Integer
-            bibendum massa eu ipsum tincidunt ullamcorper.
-          </p>
-        </div>
+        <PersonalImg src="Headshot.png" alt="Justin Schieck Self Photo" />
       </LeftSection>
       <RightSection>
-        <SkillsTitle>Skills</SkillsTitle>
-        <Skills skills={skillList} />
+        <div>
+          <h1>
+            <WelcomeTitle>Welcome! </WelcomeTitle>Im Justin and I'm currently an
+            Associate Fullstack Engineer at Manulife Financial's AEM team.
+          </h1>
+          <p>
+            I’ve spent the past 5+ years working across different areas of
+            digital design; front-end development, automatic email processing,
+            marketing site pages, working with WCAG, to my current role updating
+            and redesigning dynamic components inside Adobe Experience Manager.
+          </p>
+          <p>
+            These days my time is spent researching, designing, and coding. I
+            also help designers get started with their WCAG guidance as I am a
+            subject matter expert.
+          </p>
+          <p>
+            Out of the office you’ll find me dreaming of game design, playing
+            guitar, DIY/Maker projects and Working out.
+          </p>
+        </div>
       </RightSection>
     </RootDiv>
   );

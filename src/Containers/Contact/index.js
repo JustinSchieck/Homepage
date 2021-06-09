@@ -14,44 +14,16 @@ const TitleDiv = styled.h1`
 	width: 100%;
 `;
 
+//need to come back to this for mobile 100% width etc.
 const RowDiv = styled.div`
-	display: flex;
-	flex-direction: row; /* make main axis horizontal (default setting) */
-	justify-content: center; /* center items horizontally, in this case */
-	align-items: center; /* center items vertically, in this case */
+	width: 50%; 
+	margin: auto;
 `;
 
 const ContactSection = styled.div`
-	width: 40%;
 	margin: 0 10px 0 20px;
 `;
 
-const ResumeSection = styled.div`
-	width: 40%;
-	margin: 0 20px 0 10px;
-	justify-content: center; /* center items horizontally, in this case */
-	align-items: center; /* center items vertically, in this case */
-`;
-
-const ButtonSection = styled.div`
-	height: 100%;
-`;
-
-const ButtonSubtitle = styled.div`
-	font-size: 28px;
-	weight: 600;
-	padding: 0 0 10px 0;
-`;
-
-const ResumeButton = styled.button`
-	font-size: 20px;
-	height: 50px;
-	width: 210px;
-	cursor: pointer;
-	color: black;
-	border: 3px black solid;
-	border-radius: 5px;
-`;
 
 const Contact = () => {
 	return (
@@ -61,12 +33,6 @@ const Contact = () => {
 				<ContactSection>
 					<ContactForm />
 				</ContactSection>
-				<ResumeSection>
-					<ButtonSection>
-						<ButtonSubtitle>Download My Resume PDF Here!</ButtonSubtitle>
-						<ResumeButton>Download</ResumeButton>
-					</ButtonSection>
-				</ResumeSection>
 			</RowDiv>
 		</RootDiv>
 	);

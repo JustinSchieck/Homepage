@@ -8,19 +8,16 @@ const RootDiv = styled.div`
 `;
 
 const FormDiv = styled.form`
-	max-width: 450px;
 	text-align: left;
 	margin: auto;
 `;
 
 const FullSizeTextField = styled(TextField)`
 	width: 100%;
-	max-width: 450px;
 `;
 
 const TextBox = styled(TextField)`
 	width: 100%;
-	max-width: 450px;
 	margin: 30px 0 !important;
 `;
 
@@ -29,10 +26,7 @@ const ButtonSection = styled.div`
 `;
 
 const SubmitButton = styled.button`
-	max-width: 200px;
-	min-width: 65px;
-	width: 40%;
-	height: 50px;
+
 `;
 
 const ContactForm = () => {
