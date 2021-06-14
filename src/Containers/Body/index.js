@@ -6,7 +6,7 @@ import Projects from "../Projects";
 import Experience from "../Experience";
 import Contact from "../Contact";
 import { colors } from "../../constants";
-import Skills from "../Skills";
+import SkillsPage from "../SkllsPage";
 
 const SectionDiv = styled.div`
   display: block;
@@ -74,37 +74,6 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-const skillList = [
-  {
-    name: "HTML",
-    total: 100,
-  },
-  {
-    name: "CSS",
-    total: 85,
-  },
-  {
-    name: "Javascript",
-    total: 85,
-  },
-  {
-    name: "ES6",
-    total: 80,
-  },
-  {
-    name: "C#",
-    total: 50,
-  },
-  {
-    name: "AODA",
-    total: 100,
-  },
-  {
-    name: "REST APIs",
-    total: 60,
-  },
-];
-
 const Body = () => {
   return (
     <div style={{ height: "100%" }}>
@@ -132,7 +101,12 @@ const Body = () => {
         id="about"
       >
         <About />
-        <Skills skills={skillList} />
+      </SectionDiv>
+      <SectionDiv
+        id="skills"
+        style={{ backgroundColor: `${colors.background}` }}
+      >
+        <SkillsPage />
       </SectionDiv>
       <SectionDiv id="projects">
         <Projects />

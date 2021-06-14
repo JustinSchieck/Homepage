@@ -60,9 +60,7 @@ const Footer = () => {
           </Link>
         </LinkWrapper>
       </SectionDiv>
-      <SectionDiv>
-        <SectionTitle>Contact Form</SectionTitle>
-      </SectionDiv>
+      <SectionDiv></SectionDiv>
     </RootDiv>
   );
 };

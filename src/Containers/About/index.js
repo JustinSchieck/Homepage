@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Skills from "../Skills";
-import { colors } from "../../constants";
 
 const RootDiv = styled.div`
   display: flex;
@@ -69,41 +67,6 @@ const WelcomeTitle = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-
-const AboutTitle = styled.h1``;
-
-// const skillList = [
-//   {
-//     name: "HTML",
-//     total: 100,
-//   },
-//   {
-//     name: "CSS",
-//     total: 85,
-//   },
-//   {
-//     name: "Javascript",
-//     total: 85,
-//   },
-//   {
-//     name: "ES6",
-//     total: 80,
-//   },
-//   {
-//     name: "C#",
-//     total: 50,
-//   },
-//   {
-//     name: "AODA",
-//     total: 100,
-//   },
-//   {
-//     name: "REST APIs",
-//     total: 60,
-//   },
-// ];
-// <SkillsTitle>Skills</SkillsTitle>
-// <Skills skills={skillList} />
 
 const About = () => {
   return (
